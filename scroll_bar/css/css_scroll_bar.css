@@ -1,0 +1,51 @@
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: orange;        /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
+
+body {
+    display: grid;
+    grid-template-columns: 
+    " aside aside 
+    main main main
+    span span span ";
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "aside main span"
+    "footer footer footer";
+    grid-template-columns: 1fr minmax(500px, 1100px) 1fr;
+    grid-template-rows: 10em auto 1fr;
+    gap: 2em;
+}
+
+header {
+    grid-area: header;
+}
+aside {
+    grid-area: aside;
+}
+span {
+    grid-area: span;
+}
+main {
+    grid-area: main;
+    margin-bottom: 1em;
+}
+footer {
+    grid-area: footer;
+}
+.footer {
+        grid-row-start: 3;
+        grid-row-end: 4;
+}
